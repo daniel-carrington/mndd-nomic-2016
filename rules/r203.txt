@@ -1,0 +1,5 @@
+Rule 203
+
+
+A rule change is adopted if and only if the vote is unanimous
+among the eligible voters.

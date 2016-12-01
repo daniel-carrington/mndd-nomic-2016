@@ -1,0 +1,11 @@
+Rule 110
+
+
+Mutable rules that are inconsistent in any way with some immutable
+rule (except by proposing to transmute it) are wholly void and
+without effect. They do not implicitly transmute immutable rules
+into mutable rules and at the same time amend them. Rule changes
+that transmute immutable rules into mutable rules will be
+effective if and only if they explicitly state their transmuting
+effect.
+

@@ -1,0 +1,15 @@
+Rule 103
+
+
+A rule change is any of the following:
+
+* the enactment, repeal, or amendment of a mutable rule
+* the enactment, repeal, or amendment of an amendment
+* the transmutation of an immutable rule into a mutable rule, or vice versa
+
+(Note: This definition implies that, at least initially, all new
+rules are mutable. Immutable rules, as long as they are
+immutable, may not be amended or repealed; mutable rules, as
+long as they are mutable, may be amended or repealed. No rule
+is absolutely immune to change.)
+
