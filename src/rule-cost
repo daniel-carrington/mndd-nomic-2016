@@ -1,0 +1,22 @@
+#!/usr/bin/env perl
+
+use POSIX 'ceil';
+
+while (<>) {
+	$first = 1 and next if !$first and m/^Rule \d+$/;
+	$first = 1;
+	for (split '') {
+		$c += 0.2 and next if m/\n/;
+		next if m/\r/;
+		$c += 0.5 and next if m/[';]/;
+		$c += 0.02 and next if $wsc > 2000 and m/\w/;
+		$wsc += 1 and next if m/\w/;
+		$c += 0.02 and next if m/"/;
+		$c += 0.1 and next if m/\[|]|-|[\%&(){}#]/;
+		$nc += 1 and next if $nc <= 100;
+		$c += 0.02;
+	}
+}
+
+print ceil($c)."\n";
+exit 0;
