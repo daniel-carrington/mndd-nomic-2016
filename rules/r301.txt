@@ -4,6 +4,9 @@ When the total cost of all rules changes, the player who proposed
 the change of the rules, adds the integer value of the old cost of
 the rules minus the new cost of the rules to their point total.
 
+When this rule is adopted, the proposer of this rule loses exactly 12 points
+instead of any penalty that may or may not be implied by the previous clause.
+
 All rules must be bodies of plain text written in ASCII.
 
 The cost of a rule is equal to the sum of the base cost of the rule
