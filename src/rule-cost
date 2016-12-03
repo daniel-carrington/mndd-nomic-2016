@@ -1,21 +1,41 @@
 #!/usr/bin/env perl
 
 use POSIX 'ceil';
+$c = 0;
+
+# c - cost
+# lc - number of free LF characters
+# wsc - number of free whitespace characters
+# nc - number of other free characters
+$wsc = 0;
+
+if ($ARGV[0] eq '-v') {
+	shift;
+	$verbose = 1;
+}
 
 while (<>) {
-	$first = 1 and next if !$first and m/^Rule \d+$/;
-	$first = 1;
-	for (split '') {
-		$c += 0.2 and next if m/\n/;
+	CHAR: for (split '') {
+		#printf STDERR "showc %6.2f lc%d wsc%4d: 0x%02x:$_\n", $c, $lc, $wsc, ord($_);
+		$lc += 1 and next if m/\n/ && $lc < 4;
+		$c += 0.05 and next if m/[\t\n]/;
+
 		next if m/\r/;
-		$c += 0.5 and next if m/[';]/;
-		$c += 0.02 and next if $wsc > 2000 and m/\w/;
-		$wsc += 1 and next if m/\w/;
+
+		$c += 0.25 and next if m/[';]/;
+
+		if (m/\s/ && ($wsc < 2000)) { $wsc += 1; next CHAR; }
+		$c += 0.02 and next if m/\s/;
+
 		$c += 0.02 and next if m/"/;
+
 		$c += 0.1 and next if m/\[|]|-|[\%&(){}#]/;
-		$nc += 1 and next if $nc <= 100;
+
+		$nc += 1 and next if $nc < 120;
 		$c += 0.02;
 	}
+	printf STDERR "rule-cost %6.2f wsc%4d lc%d nc%3d :%s",
+		$c, $wsc, $lc, $nc, $_ if $verbose;
 }
 
 print ceil($c)."\n";

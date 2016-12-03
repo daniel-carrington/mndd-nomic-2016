@@ -2,25 +2,27 @@ Rule 301
 
 When the total cost of all rules changes, the player who proposed
 the change of the rules shall add the integer value of the old cost of
-the rules minus the new cost of the rules to their point total.
-When this rule is adopted, the proposer of this rule loses exactly 12 points
-instead of being penalized as described earlier in this rule.
-All rules must be bodies of plain text written in ASCII.
+the rules minus the new cost of the rules to their point total,
+except instead the proposer of this rule loses 26 points when this rule is adopted.
 
-The cost of a rule is equal to the sum of the base cost of the rule
-plus all bonus costs which apply to the rule. A bonus cost must be a
-positive integer and therefore strictly increases the cost of a rule.
+All rules must be bodies of plain text written in ASCII.
+The proper form of a rule is: the sequence "Rule", a space, the rule number,
+2 LF characters, any number of arbitrary ASCII characters, and 2 LF characters.
+
+The cost of a rule is equal to the sum of the base cost of the rule plus all bonus
+costs which apply to the rule. A bonus cost must be a positive integer and therefore
+strictly increases the cost of a rule.
 
 An immutability bonus of 20 points applies to all immutable rules as a bonus cost.
 
 The base cost of a rule is equal to the sum of a point value for each ASCII character
-in the text of the rule, rounded up to the nearest integer.
-Refer to each clause in the list, in the order below, to determine the
-cost of a character. The first clause which applies takes precedence.
+in the rule, rounded up to the nearest integer.
+For each character in the rule, take the first clause that applies to determine character cost.
 
-* 0.05 points for every LF character, byte value 0x0a.
+* 0 points each for the first 4 LF characters
+* 0.05 points for every LF character, byte value 0x0a, for every TAB character, byte value 0x09
 * 0 points for every CR, byte value 0x0d
-* 0.5 points for every ', byte value 0x27, for every ;, byte value 0x3b
+* 0.25 points for every ', byte value 0x27, for every ;, byte value 0x3b
 * 0 points for any other whitespace, up to the first 2000 characters, and after that 0.02 points
 * 0.02 points for every ", byte value 0x22
 * 0.1 points for any of the characters after the colon:%&(){}[]\-#
