@@ -1,6 +1,5 @@
 Rule 212
 
-
 If players disagree about the legality of a move or the interpretation
 or application of a rule, then the player preceding the one moving is
 to be the Judge and to decide the question. Disagreement, for the
@@ -29,3 +28,4 @@ accordance with all the rules then in effect; but when the rules
 are silent, inconsistent, or unclear on the point at issue, then
 the Judge's only guides shall be common morality, common logic, and
 the spirit of the game.
+

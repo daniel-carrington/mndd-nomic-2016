@@ -25,3 +25,4 @@ cost of a character. The first clause which applies takes precedence.
 * 0.02 points for every ", byte value 0x22
 * 0.1 points for any of the characters after the colon:%&(){}[]\-#
 * 0 points for every other ASCII character, up to the first 100 characters, and after that 0.02 points
+

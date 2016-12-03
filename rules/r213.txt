@@ -8,3 +8,4 @@ complete a turn is the winner.
 
 This rule takes precedence over every other rule determining the
 winner.
+

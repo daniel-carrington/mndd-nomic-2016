@@ -1,4 +1,4 @@
 Rule 207
 
-
 Each player has exactly one vote.
+

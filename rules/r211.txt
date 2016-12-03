@@ -1,6 +1,5 @@
 Rule 211
 
-
 If two or more mutable rules conflict with one another, or if two
 or more immutable rules conflict with one another, then the rule
 with the lowest ordinal number takes precedence.
@@ -12,3 +11,4 @@ supersede the numerical method for determining precedence.
 
 If two or more rules claim to take precedence over one another or to
 defer to one another, then the numerical method must again govern.
+
