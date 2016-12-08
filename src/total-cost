@@ -1,0 +1,6 @@
+#!/bin/bash
+
+for f in rules/r*.txt
+do
+	./src/rule-cost $f
+done | perl -ne '$a += $_; END { print "$a\n"; }'

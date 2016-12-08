@@ -1,0 +1,14 @@
+#!/bin/bash
+
+if [ -z "$1" ]
+then
+	set -- rules/r*.txt
+fi
+
+while [ -n "$1" ]
+do
+	echo $1 $(./src/rule-cost -v $1)
+	echo
+	shift
+done
+
